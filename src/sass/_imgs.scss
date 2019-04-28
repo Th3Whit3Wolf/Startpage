@@ -1,0 +1,27 @@
+.pusheen img {
+    max-width: 33vw;
+    position: fixed;
+    bottom: 0;
+    top: 250px;
+    left: 70px;
+}
+
+#blob {
+    max-width: 45vw;
+    position: fixed;
+    bottom: 0;
+    top: -20px;
+    left: 0;
+    z-index: -1;
+    opacity: 0.8;
+}
+
+#dots {
+    max-width: 16vw;
+    position: fixed;
+    top:70px;
+    left: 1100px;
+    z-index: -2;
+    transform: rotate(45deg);
+    opacity: 0.7;
+}

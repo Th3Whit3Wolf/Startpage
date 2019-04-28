@@ -1,0 +1,24 @@
+{
+	"name": "homepage",
+	"version": "1.0.0",
+	"main": "index.html",
+	"license": "MIT",
+	"description": "My Homepage",
+	"author": "The White Wolf",
+	"dependencies": {
+		"gulp": "^4.0.0",
+		"node-sass": "^4.11.0",
+		"typescript": "^3.4.2"
+	},
+	"scripts": {
+		"fa": "node-sass -w src/fa -o src/css/ --recursive",
+		"tslint": "tslint -c src/ts/tslint.json src/ts/*.ts",
+		"sass": "node-sass -w src/sass/ -o src/css/ --recursive",
+		"start": "gulp"
+	},
+	"devDependencies": {
+		"gulp": "^4.0.0",
+		"node-sass": "^4.11.0",
+		"typescript": "^3.4.2"
+	}
+}
