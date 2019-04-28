@@ -1,8 +1,8 @@
 'strict';
 
 const newscount = 6;
-const weather_api_key = 'ac307a37def36e44e9a01d7e1b672389';
-const news_api_key = '063d68797e9a46bca0925cfc51077c93';
+const weather_api_key = '';
+const news_api_key = '';
 const query = 'bitcoin';
 
 const lat = '52.412857';
