@@ -1,0 +1,170 @@
+@import 'variables';
+@import 'normalize';
+@import 'typography';
+@import 'cal';
+@import 'weather';
+@import 'news';
+
+
+html {
+    background: $background;
+}
+
+body {
+  background: $background;
+  color: black;
+}
+
+#greeting {
+  text-align: center;
+}
+
+#clock {
+  text-align: center;
+  color: $act2;
+  background: $bg2;
+  width:84%;
+  padding: 7.6rem 0.7rem;
+  margin-top: 1.6rem;
+  border-radius: 8px;
+  box-shadow: $b_shade;
+}
+
+// Quote
+.card {
+  background: $bg2;
+  color: $white;
+  padding: 2vh;
+  margin: 0rem 19.2rem;
+  width: 69.2rem;
+  border-radius: 8px;
+  box-shadow: $b_shade;
+  .quote {
+    display: block;
+    font-size: small;
+  }
+}
+
+.section-two {
+  margin-left: 0.2rem;
+  width: 25%;
+  float: right;
+  align-content: right;
+  h4{
+    padding-left: 1.6rem;
+  }
+}
+
+.search {
+  height: 1rem;
+  width: 55%;
+  height: 4.5vh;
+  background: transparent;
+  margin: 0 auto;
+  border-bottom: 5px;
+  bottom: 5;
+  border: none;
+  border-bottom: 3px solid $primary;
+  opacity: 0.3;
+}
+
+.search input {
+  height: 48px;
+  border: none;
+  background-image: none;
+  background-color: transparent;
+  box-shadow: none;
+  color: $primary;
+  width: calc(100% - 96px);
+  font-weight: 500;
+}
+
+.browse {
+  margin: 0 1.6rem 0 1.6rem;
+}
+
+.tabs-section {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(16rem, 16rem));
+  grid-gap: 1.6rem;
+}
+
+.link-tab {
+  grid-template-rows: repeat(auto-fill, minmax(16rem, 16rem));
+  height: 16rem;
+  width: 16rem;
+  margin-left: 1.1rem;
+  background: $bg2;
+  color: $bg2;
+  border-radius: 8px;
+  box-shadow: $b_shade;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  img {
+    width:200%;
+    height:200%;
+  }
+}
+
+.invert {
+  img {
+    -webkit-filter:invert(100%);
+    filter:progid:DXImageTransform.Microsoft.BasicImage(invert='1');
+    filter: invert(100%);
+    }
+}
+
+.phoronix {
+  img {
+    width:300%;
+    height:300%;
+  }
+}
+
+.link-tab:hover {
+  background: rgba(12, 12, 13, 0.07);
+  transition: 0.5s;
+}
+
+.link-tab a {
+  cursor: pointer;
+  border: none;
+  background-image: none;
+  background-color: transparent;
+  box-shadow: none;
+  border-radius: 50%;
+  width: 48px;
+  height: 48px;
+
+  font-weight: bold;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: black;
+
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.link-tab a:hover {
+  background: rgba(12, 12, 13, 0.12);
+  transition: 0.5s;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 30% 40% 30%;
+}
+.grid > div {
+  margin-left: 1.6rem;
+  margin-right: 1.6rem;
+}
+
+.info-wrapper {
+  margin-top: 0.8rem;
+  display: grid;
+  grid-template-columns: 35.2rem 35.2rem 16rem;
+}

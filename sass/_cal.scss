@@ -1,0 +1,57 @@
+@font-face {
+    font-family: 'Roboto-Regular';
+    src: url('assets/fonts/Roboto-Regular.woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+#calendar {
+    background:$bg2;
+    width:84%;
+    border-radius:8px;
+    overflow:hidden;
+    display:block;
+    box-shadow: $b_shade;
+    margin: 1.6rem;
+}
+.currentmonth {
+    font:18px 'Roboto';
+    color: solid $func;
+    text-align: center;
+    font-weight: bold;
+}
+.currentday {
+    color: $primary;
+    background: $background;
+    text-align: center;
+    border:1px solid $bg2;
+    box-sizing:border-box!important;
+    border-radius:200px!important;
+    font-weight: bold;
+}
+
+table.calendar {
+    color: $act2;
+}
+
+table.calendar th {
+    font-weight: bold;
+    color: $func;
+}
+
+table.calendar td {
+    padding:0.6rem;
+
+}
+
+.weekdays {
+    font-weight: bold;
+    color: $white;
+    padding: 0.8rem;
+}
+
+table.calendar {
+    display:inline-block;
+    *display:inline; zoom:1;
+    vertical-align:top;
+}

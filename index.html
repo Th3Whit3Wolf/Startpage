@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+		<link rel="stylesheet" type="text/css" href="css/styles.css" />
+		<title>No Place</title>
+	</head>
+
+	<body onload="startTime()">
+		<div class="grid">
+			<div><h1 id="clock"></h1></div>
+			<div>
+				<h1 id="greeting"></h1>
+				<form
+					class="search"
+					method="get"
+					action="https://www.duckduckgo.com/search"
+				>
+					<input type="search" name="q" value="" placeholder="" />
+				</form>
+			</div>
+
+			<div id="calendar"></div>
+		</div>
+		<div class="card">
+			<blockquote id="quote">
+				<p></p>
+			</blockquote>
+			<cite></cite>
+		</div>
+		<div class="section-two">
+			<h4>Quick Links</h4>
+			<div class="tabs-section">
+				<div class="link-tab">
+					<a href="https://www.reddit.com"
+						><img src="assets/icons/reddit.png"
+					/></a>
+				</div>
+				<div class="link-tab">
+					<a href="https://github.com/Th3Whit3Wolf?tab=repositories"
+						><img src="assets/icons/github.png"
+					/></a>
+				</div>
+				<div class="link-tab invert phoronix">
+					<a href="https://www.phoronix.com"
+						><img src="assets/icons/phoronix_black.png"
+					/></a>
+				</div>
+				<div class="link-tab invert">
+					<a href="https://doc.rust-lang.org/book/"
+						><img src="assets/icons/rust_logo.png"
+					/></a>
+				</div>
+			</div>
+		</div>
+
+		<div class="browse">
+			<h4 id="city"></h4>
+
+			<div class="tabs-section">
+				<div class="weather-tab">
+					<div class="title today">Today</div>
+					<div class="Text ObjToday"></div>
+					<div class="Text1 ObjTodayH"></div>
+					<div class="Text2 ObjTodayL"></div>
+					<div class="Text3 ObjTodayD"></div>
+					<div data-element="icon_ObjToday">
+						<div data-element="a_ObjToday">
+							<div data-element="a_a_ObjToday"></div>
+						</div>
+						<div data-element="b_ObjToday">
+							<div data-element="b_a_ObjToday"></div>
+							<div data-element="b_b_ObjToday"></div>
+						</div>
+						<div data-element="c_ObjToday"></div>
+					</div>
+				</div>
+
+				<div class="weather-tab">
+					<div class="title tomorrow">Tomorrow</div>
+					<b></b>
+					<div class="Text1 Obj0H"></div>
+					<div class="Text2 Obj0L"></div>
+					<div class="Text3 Obj0D"></div>
+					<div data-element="icon_Obj0">
+						<div data-element="a_Obj0">
+							<div data-element="a_a_Obj0"></div>
+						</div>
+						<div data-element="b_Obj0">
+							<div data-element="b_a_Obj0"></div>
+							<div data-element="b_b_Obj0"></div>
+						</div>
+						<div data-element="c_Obj0"></div>
+					</div>
+				</div>
+
+				<div class="weather-tab">
+					<div class="title Day1"></div>
+					<div class="Text1 Obj1H"></div>
+					<div class="Text2 Obj1L"></div>
+					<div class="Text3 Obj1D"></div>
+					<div data-element="icon_Obj1">
+						<div data-element="a_Obj1">
+							<div data-element="a_a_Obj1"></div>
+						</div>
+						<div data-element="b_Obj1">
+							<div data-element="b_a_Obj1"></div>
+							<div data-element="b_b_Obj1"></div>
+						</div>
+						<div data-element="c_Obj1"></div>
+					</div>
+				</div>
+
+				<div class="weather-tab">
+					<div class="title Day2"></div>
+					<div class="Text1 Obj2H"></div>
+					<div class="Text2 Obj2L"></div>
+					<div class="Text3 Obj2D"></div>
+					<div data-element="icon_Obj2">
+						<div data-element="a_Obj2">
+							<div data-element="a_a_Obj2"></div>
+						</div>
+						<div data-element="b_Obj2">
+							<div data-element="b_a_Obj2"></div>
+							<div data-element="b_b_Obj2"></div>
+						</div>
+						<div data-element="c_Obj2"></div>
+					</div>
+				</div>
+
+				<div class="weather-tab">
+					<div class="title Day3"></div>
+					<div class="Text1 Obj3H"></div>
+					<div class="Text2 Obj3L"></div>
+					<div class="Text3 Obj3D"></div>
+					<div data-element="icon_Obj3">
+						<div data-element="a_Obj3">
+							<div data-element="a_a_Obj3"></div>
+						</div>
+						<div data-element="b_Obj3">
+							<div data-element="b_a_Obj3"></div>
+							<div data-element="b_b_Obj3"></div>
+						</div>
+						<div data-element="c_Obj3"></div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="info-wrapper">
+			<div class="news">
+				<div id="news-section"></div>
+			</div>
+			<div class="reddit">
+				<div id="reddit-section"></div>
+			</div>
+			<div id="git-container"></div>
+		</div>
+
+		<script src="js/cookie.js"></script>
+		<script src="js/weather.js"></script>
+		<script src="js/api.js" async></script>
+		<script src="js/cali.js" async></script>
+		<script src="js/greeting.js"></script>
+		<script src="js/quote.js"></script>
+	</body>
+</html>
