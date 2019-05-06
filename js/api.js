@@ -15,11 +15,12 @@ const reddit_sort = 'setsuggestedsort';
 const reddit_time = 'week'; //
 
 async function main() {
-	let ten_minutes_in_millis = 10 * 60 * 1000;
-	setIntervalAsync(setWeather, ten_minutes_in_millis);
-	setIntervalAsync(getNews, ten_minutes_in_millis);
-	setIntervalAsync(getReddits, ten_minutes_in_millis);
-	setIntervalAsync(getGits, ten_minutes_in_millis);
+	let fifteen_minutes_in_millis = 15 * 60 * 1000;
+	let one_hour_in_millis = 60 * 60 * 1000;
+	setIntervalAsync(setWeather, one_hour_in_millis);
+	setIntervalAsync(getNews, fifteen_minutes_in_millis);
+	setIntervalAsync(getReddits, fifteen_minutes_in_millis);
+	setIntervalAsync(getGits, fifteen_minutes_in_millis);
 }
 
 // setInterval function that can deal with async
