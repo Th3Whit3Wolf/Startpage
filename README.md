@@ -89,12 +89,15 @@ I designed this on Firefox:
 
 I've tested on chromium
 
-- Mostly okay
-- Clock is slighltly closer to the quotes
+- Should be okay
 
 I've test on surfer(webkit)
 
 - Calendar for some reason only shows first week and incorrect days
-- Clock is even more off
 
 I haven't tested on any other platform
+
+## Todo
+
+[ ] add cookies
+[ ] integrate Tile Enhanced search and onclick functionality
