@@ -126,6 +126,34 @@ async function getReddits() {
 	}
 }
 
+async function getGits() {
+	let gitData = await getGitsJson();
+	var gits = document.getElementById('git-container');
+
+	for (var i = 0; i < info_items / 2; i = i + 1) {
+		gits.innerHTML +=
+			'<div class="git-card id="github-' +
+			i +
+			'><a href="' +
+			gitData.items[i].html_url +
+			'"><div class="git-card__image-container">' +
+			'<img class="git-card__image"' +
+			' src="' +
+			gitData.items[i].owner.avatar_url +
+			'" /></div>' +
+			'<div class="git-card__content">' +
+			'<h4 class="git-card__title">' +
+			gitData.items[i].name
+				.replace(/-/g, ' ')
+				.replace(/\./g, ' ')
+				.replace(/_/g, ' ') +
+			'</h4>' +
+			'<p class="git-description">' +
+			gitData.items[i].description +
+			'</p></div></a></div>';
+	}
+}
+
 async function setWeather() {
 	let [country, postal] = await getUserLocation();
 	forecast = false;
@@ -225,28 +253,3 @@ async function setWeather() {
 }
 
 main();
-
-async function getGits() {
-	let gitData = await getGitsJson();
-	var gits = document.getElementById('git-container');
-
-	for (var i = 0; i < info_items / 2; i = i + 1) {
-		gits.innerHTML +=
-			'<div class="git-card id="github-' +
-			i +
-			'><a href="' +
-			gitData.items[i].html_url +
-			'"><div class="git-card__image-container">' +
-			'<img class="git-card__image"' +
-			' src="' +
-			gitData.items[i].owner.avatar_url +
-			'" /></div>' +
-			'<div class="git-card__content">' +
-			'<h4 class="git-card__title">' +
-			gitData.items[i].name.replace(/-/g, ' ') +
-			'</h4>' +
-			'<p class="git-description">' +
-			gitData.items[i].description +
-			'</p></div></a></div>';
-	}
-}
