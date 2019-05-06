@@ -348,15 +348,14 @@ cite {
 
 #calendar {
   background: #212026;
-  width: 84%;
+  width: 33.6rem;
   border-radius: 8px;
   overflow: hidden;
   display: block;
   box-shadow: 3px 3px 10px #222;
-  margin: 1.6rem; }
+  font-size: 17px; }
 
 .currentmonth {
-  font: 18px 'Roboto';
   color: solid #bc6ec5;
   text-align: center;
   font-weight: bold; }
@@ -371,19 +370,23 @@ cite {
   font-weight: bold; }
 
 table.calendar {
-  color: #5d4d7a; }
+  color: #5d4d7a;
+  padding: 1rem; }
 
 table.calendar th {
+  padding: 0rem;
   font-weight: bold;
+  font-size: 20px;
   color: #bc6ec5; }
 
 table.calendar td {
-  padding: 0.6rem; }
+  padding: 0.6rem 1rem; }
 
 .weekdays {
+  font-size: 18px;
   font-weight: bold;
   color: #a3a3a3;
-  padding: 0.8rem; }
+  padding: 0.6rem; }
 
 table.calendar {
   display: inline-block;
@@ -882,9 +885,10 @@ body {
   text-align: center;
   color: #5d4d7a;
   background: #212026;
-  width: 84%;
+  width: 33.6rem;
+  height: 20rem;
   padding: 7.6rem 0.7rem;
-  margin-top: 1.6rem;
+  margin-top: 0rem;
   border-radius: 8px;
   box-shadow: 3px 3px 10px #222; }
 
@@ -990,11 +994,10 @@ body {
 
 .grid {
   display: grid;
-  grid-template-columns: 30% 40% 30%; }
+  grid-template-columns: 35.2rem 35.2rem 35.2rem; }
 
 .grid > div {
-  margin-left: 1.6rem;
-  margin-right: 1.6rem; }
+  margin: 1.6rem; }
 
 .info-wrapper {
   margin-top: 0.8rem;

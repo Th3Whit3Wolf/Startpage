@@ -23,9 +23,10 @@ body {
   text-align: center;
   color: $act2;
   background: $bg2;
-  width:84%;
+  width:33.6rem;
+  height: 20rem;
   padding: 7.6rem 0.7rem;
-  margin-top: 1.6rem;
+  margin-top: 0rem;
   border-radius: 8px;
   box-shadow: $b_shade;
 }
@@ -156,11 +157,10 @@ body {
 
 .grid {
   display: grid;
-  grid-template-columns: 30% 40% 30%;
+  grid-template-columns: 35.2rem 35.2rem 35.2rem;
 }
 .grid > div {
-  margin-left: 1.6rem;
-  margin-right: 1.6rem;
+  margin: 1.6rem;
 }
 
 .info-wrapper {

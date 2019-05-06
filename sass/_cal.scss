@@ -7,15 +7,15 @@
 
 #calendar {
     background:$bg2;
-    width:84%;
+    width:33.6rem;
     border-radius:8px;
     overflow:hidden;
     display:block;
     box-shadow: $b_shade;
-    margin: 1.6rem;
+    font-size: 17px;
 }
 .currentmonth {
-    font:18px 'Roboto';
+    //font:16px 'Roboto';
     color: solid $func;
     text-align: center;
     font-weight: bold;
@@ -32,22 +32,28 @@
 
 table.calendar {
     color: $act2;
+    padding:1rem;
 }
 
+// Month
 table.calendar th {
+    padding: 0rem;
     font-weight: bold;
+    font-size: 20px;
     color: $func;
 }
 
+// Days
 table.calendar td {
-    padding:0.6rem;
-
+    padding:0.6rem 1rem;
 }
 
+// Mon Tue etc
 .weekdays {
+    font-size: 18px;
     font-weight: bold;
     color: $white;
-    padding: 0.8rem;
+    padding: 0.6rem;
 }
 
 table.calendar {

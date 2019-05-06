@@ -21,10 +21,10 @@ function startTime() {
 
 	function displayTimeOfDay() {
 		let time = new Date().getHours();
-		if (time >= 0 && time <= 3) return 'evening';
-		if (time >= 4 && time <= 11) return 'morning';
-		if (time >= 12 && time <= 16) return 'afternoon';
-		if (time >= 17 && time <= 24) return 'evening';
+		if (time >= 0 && time <= 3) return 'Evening';
+		if (time >= 4 && time <= 11) return 'Morning';
+		if (time >= 12 && time <= 16) return 'Afternoon';
+		if (time >= 17 && time <= 24) return 'Evening';
 		console.log(time);
 	}
 
