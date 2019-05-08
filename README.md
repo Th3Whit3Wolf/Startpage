@@ -99,5 +99,5 @@ I haven't tested on any other platform
 
 ## Todo
 
-- [ ] add cookies
+- [ ] add local cache
 - [ ] integrate Tile Enhanced search and onclick functionality
