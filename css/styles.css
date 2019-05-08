@@ -394,15 +394,6 @@ table.calendar {
   zoom: 1;
   vertical-align: top; }
 
-.weather-card {
-  width: 90%;
-  height: 25vh;
-  background: #5d4d7a;
-  border-radius: 8px;
-  box-shadow: 3px 3px 10px #222;
-  position: absolute;
-  top: 32rem; }
-
 .weather-tab {
   height: 16rem;
   width: 16rem;
@@ -699,7 +690,6 @@ table.calendar {
 
 .news {
   display: block;
-  margin: 0.8rem 0 0 1.6rem;
   flex-direction: column;
   align-content: right; }
 
@@ -743,7 +733,6 @@ table.calendar {
 
 .reddit {
   display: block;
-  margin: 0.8rem 0 0 1.6rem;
   flex-direction: column;
   align-content: right; }
 
@@ -786,7 +775,6 @@ table.calendar {
   color: #a3a3a3; }
 
 #git-container {
-  margin: 0.8rem 0 0 1.6rem;
   box-sizing: border-box;
   line-height: 1.5;
   display: flex;
@@ -895,9 +883,9 @@ body {
 .card {
   background: #212026;
   color: #a3a3a3;
-  padding: 2vh;
-  margin: 0rem 19.2rem;
-  width: 69.2rem;
+  padding: 3rem;
+  margin-left: calc((100% - 105.6rem)/2 + 17.6rem);
+  width: 68.8rem;
   border-radius: 8px;
   box-shadow: 3px 3px 10px #222; }
   .card .quote {
@@ -905,8 +893,7 @@ body {
     font-size: small; }
 
 .section-two {
-  margin-left: 0.2rem;
-  width: 25%;
+  width: calc(100% - (((100% - 105.6rem)/2) + 88rem));
   float: right;
   align-content: right; }
   .section-two h4 {
@@ -935,7 +922,7 @@ body {
   font-weight: 500; }
 
 .browse {
-  margin: 0 1.6rem 0 1.6rem; }
+  margin-left: calc((100% - 105.6rem)/2); }
 
 .tabs-section {
   display: grid;
@@ -946,7 +933,6 @@ body {
   grid-template-rows: repeat(auto-fill, minmax(16rem, 16rem));
   height: 16rem;
   width: 16rem;
-  margin-left: 1.1rem;
   background: #212026;
   color: #212026;
   border-radius: 8px;
@@ -954,9 +940,6 @@ body {
   display: flex;
   align-items: center;
   justify-content: center; }
-  .link-tab img {
-    width: 200%;
-    height: 200%; }
 
 .invert img {
   -webkit-filter: invert(100%);
@@ -964,8 +947,8 @@ body {
   filter: invert(100%); }
 
 .phoronix img {
-  width: 300%;
-  height: 300%; }
+  width: 150%;
+  height: 150%; }
 
 .link-tab:hover {
   background: rgba(12, 12, 13, 0.07);
@@ -978,8 +961,9 @@ body {
   background-color: transparent;
   box-shadow: none;
   border-radius: 50%;
-  width: 48px;
-  height: 48px;
+  width: 9rem;
+  height: 9rem;
+  align-content: center;
   font-weight: bold;
   text-decoration: none;
   text-transform: uppercase;
@@ -994,12 +978,14 @@ body {
 
 .grid {
   display: grid;
-  grid-template-columns: 35.2rem 35.2rem 35.2rem; }
+  margin-left: calc((100% - 105.6rem)/2);
+  grid-template-columns: 35.2rem 35.2rem 33.6rem; }
 
 .grid > div {
-  margin: 1.6rem; }
+  margin: 1.6rem 0; }
 
 .info-wrapper {
-  margin-top: 0.8rem;
+  margin-top: 1.6rem;
   display: grid;
-  grid-template-columns: 35.2rem 35.2rem 16rem; }
+  grid-template-columns: 17.6rem 35.2rem 33.6rem;
+  margin-left: calc((100% - 105.6rem)/2); }

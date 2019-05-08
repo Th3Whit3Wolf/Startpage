@@ -19,7 +19,7 @@ async function main() {
 	let one_hour_in_millis = 60 * 60 * 1000;
 	setIntervalAsync(setWeather, one_hour_in_millis);
 	setIntervalAsync(getNews, fifteen_minutes_in_millis);
-	setIntervalAsync(getReddits, fifteen_minutes_in_millis);
+	//setIntervalAsync(getReddits, fifteen_minutes_in_millis);
 	setIntervalAsync(getGits, fifteen_minutes_in_millis);
 }
 
@@ -34,7 +34,7 @@ function setIntervalAsync(fn, interval_in_millis) {
 }
 
 async function getUserLocation() {
-	let json = await getJson(locationUrl);
+	//let json = await getJson(locationUrl);
 	const city = document.getElementById('city');
 	const city_name = 'This';
 	const country_name = 'is just a demo';
@@ -160,12 +160,12 @@ async function getGits() {
 async function setWeather() {
 	let [country, postal] = await getUserLocation();
 	forecast = false;
-	let currentWeatherData = await getWeatherJson(country, postal, forecast);
-	let current_temp = Math.round(currentWeatherData.main.temp);
-	let today_temp_low = Math.round(currentWeatherData.main.temp_min);
-	let today_temp_high = Math.round(currentWeatherData.main.temp_max);
-	let tod_desc = currentWeatherData.weather[0].description;
-	let weatherId = currentWeatherData.weather[0].id;
+	//let currentWeatherData = await getWeatherJson(country, postal, forecast);
+	let current_temp = 80; //Math.round(currentWeatherData.main.temp);
+	let today_temp_low = 32; //Math.round(currentWeatherData.main.temp_min);
+	let today_temp_high = 101; //Math.round(currentWeatherData.main.temp_max);
+	let tod_desc = "It's alright"; //currentWeatherData.weather[0].description;
+	let weatherId = 800; //currentWeatherData.weather[0].id;
 	weatherIcon(
 		weatherId,
 		current_temp,
@@ -176,7 +176,7 @@ async function setWeather() {
 
 	delete forecast;
 	forecast = true;
-	let weatherData = await getWeatherJson(country, postal, forecast);
+	//let weatherData = await getWeatherJson(country, postal, forecast);
 
 	var d = new Date();
 	const tomorrow = new Date();
@@ -184,22 +184,23 @@ async function setWeather() {
 	tomorrow.setHours(1, 0, 0, 0);
 	dayt = +new Date(tomorrow.valueOf());
 	dayt = dayt / 1000;
-	var dyt = new Array();
+	//var dyt = new Array();
 
 	day1 = dayt + 86400;
-	var dy1 = new Array();
+	//var dy1 = new Array();
 
 	day2 = day1 + 86400;
-	var dy2 = new Array();
+	//var dy2 = new Array();
 
 	day3 = day2 + 86400;
-	var dy3 = new Array();
+	//var dy3 = new Array();
 
 	day4 = day3 + 86400;
 
 	let tod = d.getDay();
 	getDays(tod);
 
+	/*
 	for (i = 0; i < weatherData.cnt - 1; i++) {
 		if (weatherData.list[i].dt >= dayt && weatherData.list[i].dt < day1) {
 			dyt.push(weatherData.list[i]);
@@ -221,38 +222,62 @@ async function setWeather() {
 		} else {
 		}
 	}
+	*/
 	var whichObject = 0;
 	forecastIcon(
-		weatherID(dyt),
+		301, //weatherID(dyt),
 		whichObject,
-		maxTemp(dyt),
-		minTemp(dyt),
-		description(dyt)
+		90, //maxTemp(dyt),
+		30, //minTemp(dyt),
+		'Rainy' //description(dyt)
 	);
 	var whichObject = whichObject + 1;
 	forecastIcon(
-		weatherID(dy1),
+		601, //weatherID(dy1),
 		whichObject,
-		maxTemp(dy1),
-		minTemp(dy1),
-		description(dy1)
+		90, //maxTemp(dy1),
+		30, //minTemp(dy1),
+		'Snowy' //description(dy1)
 	);
 	var whichObject = whichObject + 1;
 	forecastIcon(
-		weatherID(dy2),
+		801, //weatherID(dy2),
 		whichObject,
-		maxTemp(dy2),
-		minTemp(dy2),
-		description(dy2)
+		90, //maxTemp(dy2),
+		30, //minTemp(dy2),
+		'Cloudy' //description(dy2)
 	);
 	var whichObject = whichObject + 1;
 	forecastIcon(
-		weatherID(dy3),
+		301, //weatherID(dy3),
 		whichObject,
-		maxTemp(dy3),
-		minTemp(dy3),
-		description(dy3)
+		90, //maxTemp(dy3),
+		30, //minTemp(dy3),
+		'Sunny' //description(dy3)
 	);
 }
 
 main();
+
+function weatherIcon(weatherId, temp, max_temp, min_temp, desc) {
+	if (weatherId >= 200 && weatherId < 300) {
+		thunder_storm('Today');
+	} else if (weatherId >= 300 && weatherId < 600) {
+		rainy('Today');
+	} else if (weatherId >= 600 && weatherId < 670) {
+		flurries('Today');
+	} else if (weatherId >= 801 && weatherId < 900) {
+		cloudy('Today');
+	} else if (weatherId == 800) {
+		sunny('Today');
+	} else {
+		sun_shower('Today');
+	}
+	document.querySelector('div.Text.ObjToday').innerHTML =
+		'<span class="first-word">Now </span>' + temp + '°F';
+	document.querySelector('div.Text1.ObjTodayH').innerHTML =
+		'<span class="first-word">High </span>' + max_temp + '°F';
+	document.querySelector('div.Text2.ObjTodayL').innerHTML =
+		'<span class="first-word">Low </span>' + min_temp + '°F';
+	document.querySelector('div.Text3.ObjTodayD').innerHTML = desc;
+}

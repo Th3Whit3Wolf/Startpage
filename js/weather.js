@@ -158,8 +158,10 @@ function weatherIcon(weatherId, temp, max_temp, min_temp, desc) {
 		flurries('Today');
 	} else if (weatherId >= 801 && weatherId < 900) {
 		cloudy('Today');
-	} else {
+	} else if (weatherId == 800) {
 		sunny('Today');
+	} else {
+		sun_shower('Today');
 	}
 	document.querySelector('div.Text.ObjToday').innerHTML =
 		'<span class="first-word">Now </span>' + temp + '°F';
@@ -179,8 +181,10 @@ function forecastIcon(weatherId, whichObject, max_temp, min_temp, desc) {
 		flurries(whichObject);
 	} else if (weatherId >= 801 && weatherId < 900) {
 		cloudy(whichObject);
-	} else {
+	} else if (weatherId == 800) {
 		sunny(whichObject);
+	} else {
+		sun_shower(whichObject);
 	}
 	document.querySelector('div.Text1.Obj' + whichObject + 'H').innerHTML =
 		'<span class="first-word">High </span>' + max_temp + '°F';
