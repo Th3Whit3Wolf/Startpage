@@ -97,6 +97,12 @@ I've test on surfer(webkit)
 
 I haven't tested on any other platform
 
+## [Demo](https://th3whit3wolf.github.io/Startpage/)
+
+### Notes About Demo Site
+
+Unlike the real startpage the demo site serves static content for Weather and reddit
+
 ## Todo
 
 - [ ] add local cache
