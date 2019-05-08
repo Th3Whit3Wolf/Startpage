@@ -88,16 +88,29 @@ async function getNews() {
 	let newsData = await getNewsJson();
 	var news = document.getElementById('news-section');
 	for (var i = 0; i < info_items; i = i + 1) {
-		news.innerHTML +=
-			'<a href="' +
-			newsData.articles[i].url +
-			'" class="news-tab" id="news-' +
-			i +
-			'"><div class="news-left" style="background:url(' +
-			newsData.articles[i].urlToImage +
-			'); background-size:cover; background-position:center; background-repeat:no-repeat;"></div><div class="news-right"><h6 class="news-title">' +
-			newsData.articles[i].title +
-			'</h6></div></a>';
+		if (newsData.articles[i].urlToImage == null) {
+			news.innerHTML +=
+				'<a href="' +
+				newsData.articles[i].url +
+				'" class="news-tab" id="news-' +
+				i +
+				'"><div class="news-left" style="background:url(' +
+				'assets/icons/news.jpe' +
+				'); background-size:cover; background-position:center; background-repeat:no-repeat;"></div><div class="news-right"><h6 class="news-title">' +
+				newsData.articles[i].title +
+				'</h6></div></a>';
+		} else {
+			news.innerHTML +=
+				'<a href="' +
+				newsData.articles[i].url +
+				'" class="news-tab" id="news-' +
+				i +
+				'"><div class="news-left" style="background:url(' +
+				newsData.articles[i].urlToImage +
+				'); background-size:cover; background-position:center; background-repeat:no-repeat;"></div><div class="news-right"><h6 class="news-title">' +
+				newsData.articles[i].title +
+				'</h6></div></a>';
+		}
 	}
 }
 
