@@ -36,22 +36,25 @@ function setIntervalAsync(fn, interval_in_millis) {
 async function getUserLocation() {
 	let json = await getJson(locationUrl);
 	const city = document.getElementById('city');
-	city.textContent = `${json.city}, ${json.country_name}`;
-	return [json.country_code, json.postal];
+	const city_name = 'This';
+	const country_name = 'is just a demo';
+	city.textContent = `${city_name}, ${country_name}`;
+	//return [json.country_code, json.postal];
+	return ['string1', 'string2'];
 }
 
 async function getWeatherJson(country, postal, forecast) {
 	if (forecast == false) {
-		let weatherUrl = `https://api.openweathermap.org/data/2.5/weather?zip=${postal},${country}&units=imperial&APPID=${weather_api_key}`;
+		let weatherUrl = `https://samples.openweathermap.org/data/2.5/weather?id=2172797&appid=b6907d289e10d714a6e88b30761fae22`;
 		return await getJson(weatherUrl);
 	} else {
-		let weatherUrl = `https://api.openweathermap.org/data/2.5/forecast?zip=${postal},${country}&units=imperial&APPID=${weather_api_key}`;
+		let weatherUrl = `https://samples.openweathermap.org/data/2.5/forecast?zip=94040&appid=b6907d289e10d714a6e88b30761fae22`;
 		return await getJson(weatherUrl);
 	}
 }
 
 async function getNewsJson() {
-	let newsUrl = `https://newsapi.org/v2/top-headlines?sources=google-news&apiKey=${news_api_key}`;
+	let newsUrl = `https://newsapi.org/v2/everything?q=bitcoin&from=2019-04-08&sortBy=publishedAt&apiKey=063d68797e9a46bca0925cfc51077c93`;
 	return await getJson(newsUrl);
 }
 
