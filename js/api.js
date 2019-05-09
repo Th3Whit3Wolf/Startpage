@@ -54,7 +54,7 @@ async function getWeatherJson(country, postal, forecast) {
 }
 
 async function getNewsJson() {
-	let newsUrl = `https://newsapi.org/v2/everything?q=bitcoin&from=2019-04-08&sortBy=publishedAt&apiKey=063d68797e9a46bca0925cfc51077c93`;
+	let newsUrl = `https://newsapi.org/v2/top-headlines?country=us&category=business&apiKey=063d68797e9a46bca0925cfc51077c93`;
 	return await getJson(newsUrl);
 }
 
