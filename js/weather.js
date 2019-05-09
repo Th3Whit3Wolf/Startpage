@@ -233,8 +233,17 @@ function mode(arr) {
 		.pop();
 }
 
-function getDays(today) {
+const dayNames = [
+	'Sunday',
+	'Monday',
+	'Tuesday',
+	'Wednesday',
+	'Thursday',
+	'Friday',
+	'Saturday'
+];
 
+function getDays(today) {
 	const dayStyle = [
 		'5.25rem',
 		'5.25rem',
@@ -295,7 +304,8 @@ weather_log(whichObject) {
 	if (whichObject == 0) {
 		console.log('Icons has been added to Tomorrow');
 	}
-	if (whichObject == 1) {
+	else if (whichObject == 1) {
+
 
 	}
 }
