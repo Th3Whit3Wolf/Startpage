@@ -271,26 +271,3 @@ async function setWeather() {
 }
 
 main();
-
-function weatherIcon(weatherId, temp, max_temp, min_temp, desc) {
-	if (weatherId >= 200 && weatherId < 300) {
-		thunder_storm('Today');
-	} else if (weatherId >= 300 && weatherId < 600) {
-		rainy('Today');
-	} else if (weatherId >= 600 && weatherId < 670) {
-		flurries('Today');
-	} else if (weatherId >= 801 && weatherId < 900) {
-		cloudy('Today');
-	} else if (weatherId == 800) {
-		sunny('Today');
-	} else {
-		sun_shower('Today');
-	}
-	document.querySelector('div.Text.ObjToday').innerHTML =
-		'<span class="first-word">Now </span>' + temp + '°F';
-	document.querySelector('div.Text1.ObjTodayH').innerHTML =
-		'<span class="first-word">High </span>' + max_temp + '°F';
-	document.querySelector('div.Text2.ObjTodayL').innerHTML =
-		'<span class="first-word">Low </span>' + min_temp + '°F';
-	document.querySelector('div.Text3.ObjTodayD').innerHTML = desc;
-}
