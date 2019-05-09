@@ -107,3 +107,4 @@ Unlike the real startpage the demo site serves static content for Weather and re
 
 - [ ] add local cache
 - [ ] integrate Tile Enhanced search and onclick functionality
+- [ ] handle errors when Reddit is down

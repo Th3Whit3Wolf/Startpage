@@ -234,15 +234,7 @@ function mode(arr) {
 }
 
 function getDays(today) {
-	const dayNames = [
-		'Sunday',
-		'Monday',
-		'Tuesday',
-		'Wednesday',
-		'Thursday',
-		'Friday',
-		'Saturday'
-	];
+
 	const dayStyle = [
 		'5.25rem',
 		'5.25rem',
@@ -293,5 +285,17 @@ function getDays(today) {
 			dayNames[today + 4 - 7];
 		document.querySelector('div.title.Day3').style.left =
 			dayStyle[today + 4 - 7];
+	}
+}
+
+weather_log(whichObject) {
+	var d = new Date();
+	let tod = d.getDay();
+	getDays(tod);
+	if (whichObject == 0) {
+		console.log('Icons has been added to Tomorrow');
+	}
+	if (whichObject == 1) {
+
 	}
 }
