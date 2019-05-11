@@ -32,9 +32,9 @@
 - It will automatically change the day, month, year
 - Current day is circled
 
-### <b>6.</b> Random programmer quote is awesome
+### <b>6.</b> Random Programmer Quote
 
-- not an api, I made an array with quote from stormconsultancy, vim-startify, and some others I've found
+- Not an api, I made an array with quote from stormconsultancy, vim-startify, and some others I've found
 - Because it's hardcoded it works when you don't have internet
 
 ### <b>7.</b> Quick Links
@@ -58,7 +58,7 @@
 
 ### <b>11.</b> Self-Updating
 
-- Every 10 Minutes it updates the posts from Reddit, Github, Google News, and checks the weather again
+- Every 15 Minutes it updates the posts from Reddit, Github, Google News, and checks the weather again
 
 ### <b>12.</b> Greeting
 
