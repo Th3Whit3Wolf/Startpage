@@ -29,7 +29,7 @@ function startTime() {
 	}
 
 	const greeting = document.getElementById('greeting');
-	greeting.textContent = `Good ${displayTimeOfDay()}, Doctor!`;
+	greeting.textContent = `Good ${displayTimeOfDay()}, User!`;
 
 	var time = setTimeout(function() {
 		startTime();
