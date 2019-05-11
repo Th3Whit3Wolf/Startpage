@@ -1,4 +1,4 @@
-# Version 0.9](https://github.com/Th3Whit3Wolf/Startpage/compare/d83355e81ef571f139c035b19199450098f94610...ca3a1cbb9ec8279672f3fc44b9cb9d522d9b2619) (2019-05-11)
+# [Version 0.9](https://github.com/Th3Whit3Wolf/Startpage/compare/d83355e81ef571f139c035b19199450098f94610...ca3a1cbb9ec8279672f3fc44b9cb9d522d9b2619) (2019-05-11)
 
 ### Bug Fixes
 
@@ -7,7 +7,7 @@
 - **Refactor** Removed cookie.js and refactored api.js to be simpler and easier to read
 - **Updates** Previously updates would add rather than replace posts, that has been corrected
 
-# Version 0.8](https://github.com/Th3Whit3Wolf/Startpage/compare/a88bf65f5b70edb6d3c15fe601c59850eb6f74ef...d83355e81ef571f139c035b19199450098f94610) (First Release)(2019-05-08)
+# [Version 0.8](https://github.com/Th3Whit3Wolf/Startpage/compare/a88bf65f5b70edb6d3c15fe601c59850eb6f74ef...d83355e81ef571f139c035b19199450098f94610) (First Release)(2019-05-08)
 
 ### Bug Fixes
 
