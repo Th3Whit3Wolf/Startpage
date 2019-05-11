@@ -9,19 +9,26 @@
 	</head>
 
 	<body onload="startTime()">
+		<form
+			autocomplete="off"
+			class="center overlay search-form"
+			id="search-form"
+			spellcheck="false"
+		>
+			<div>
+				<input
+					class="search-input"
+					id="search-input"
+					title="search"
+					type="text"
+				/>
+				<ul class="search-suggestions" id="search-suggestions"></ul>
+			</div>
+		</form>
+
 		<div class="grid">
 			<div><h1 id="clock"></h1></div>
-			<div>
-				<h1 id="greeting"></h1>
-				<form
-					class="search"
-					method="get"
-					action="https://www.duckduckgo.com/search"
-				>
-					<input type="search" name="q" value="" placeholder="" />
-				</form>
-			</div>
-
+			<div><h1 id="greeting"></h1></div>
 			<div id="calendar"></div>
 		</div>
 		<div class="card">
@@ -150,17 +157,18 @@
 		</div>
 
 		<div class="info-wrapper">
+			<div id="git-container"></div>
 			<div class="news">
 				<div id="news-section"></div>
 			</div>
 			<div class="reddit">
 				<div id="reddit-section"></div>
 			</div>
-			<div id="git-container"></div>
 		</div>
 
-		<script src="js/weather.js" async></script>
-		<script src="js/api.js" async></script>
+		<script src="js/script.js"></script>
+		<script src="js/weather.js"></script>
+		<script src="js/api.js"></script>
 		<script src="js/cali.js" async></script>
 		<script src="js/greeting.js" async></script>
 		<script src="js/quote.js" async></script>
