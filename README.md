@@ -79,6 +79,15 @@ You can also configure how many news items you get (via js/api.js)
 
 - Number should be an even number between 2-24
 
+## Install:
+
+```shell
+git clone git@github.com:Th3Whit3Wolf/Startpage.git ~/.homepage
+```
+
+Then set your browser's homepage to `file:///home/USER/.hompage/index.html`
+replacing USER with your username
+
 ## Credits:
 
 [startpages](https://www.reddit.com/r/startpages/)
