@@ -1,6 +1,5 @@
 function sun_shower(whichObject) {
-	console.log('sun_shower');
-	console.log('Icons has been added to ' + whichObject);
+	console_weather(whichObject, 'sun shower');
 	document.querySelector(
 		'div[data-element=icon_Obj' + whichObject + ']'
 	).className = 'icon sun-shower';
@@ -24,8 +23,7 @@ function sun_shower(whichObject) {
 	).className = 'rain';
 }
 function thunder_storm(whichObject) {
-	console.log('thunder_storm');
-	console.log('Icons has been added to ' + whichObject);
+	console_weather(whichObject, 'thunder storm');
 	document.querySelector(
 		'div[data-element=icon_Obj' + whichObject + ']'
 	).className = 'icon thunder-storm';
@@ -49,8 +47,7 @@ function thunder_storm(whichObject) {
 	).className = '';
 }
 function cloudy(whichObject) {
-	console.log('cloudy');
-	console.log('Icons has been added to ' + whichObject);
+	console_weather(whichObject, 'cloudy');
 	document.querySelector(
 		'div[data-element=icon_Obj' + whichObject + ']'
 	).className = 'icon cloudy';
@@ -74,8 +71,7 @@ function cloudy(whichObject) {
 	).className = '';
 }
 function flurries(whichObject) {
-	console.log('flurries');
-	console.log('Icons has been added to ' + whichObject);
+	console_weather(whichObject, 'flurries');
 	document.querySelector(
 		'div[data-element=icon_Obj' + whichObject + ']'
 	).className = 'icon flurries';
@@ -99,8 +95,7 @@ function flurries(whichObject) {
 	).className = '';
 }
 function sunny(whichObject) {
-	console.log('sunny');
-	console.log('Icons has been added to ' + whichObject);
+	console_weather(whichObject, 'sunny');
 	document.querySelector(
 		'div[data-element=icon_Obj' + whichObject + ']'
 	).className = 'icon sunny';
@@ -124,8 +119,7 @@ function sunny(whichObject) {
 	).className = '';
 }
 function rainy(whichObject) {
-	console.log('rainy');
-	console.log('Icons has been added to ' + whichObject);
+	console_weather(whichObject, 'rainy');
 	document.querySelector(
 		'div[data-element=icon_Obj' + whichObject + ']'
 	).className = 'icon rainy';
@@ -233,6 +227,8 @@ function mode(arr) {
 		.pop();
 }
 
+// These arrays contain duplicates
+// so there's no need to write logic for going into the next week
 const dayNames = [
 	'Sunday',
 	'Monday',
@@ -240,72 +236,45 @@ const dayNames = [
 	'Wednesday',
 	'Thursday',
 	'Friday',
-	'Saturday'
+	'Saturday',
+	'Sunday',
+	'Monday',
+	'Tuesday',
+	'Wednesday'
 ];
 
+const dayStyle = [
+	'5.25rem',
+	'5.25rem',
+	'5rem',
+	'4rem',
+	'4.5rem',
+	'5.25rem',
+	'4.5rem',
+	'5.25rem',
+	'5.25rem',
+	'5rem',
+	'4rem'
+];
+
+// Get day and center it
 function getDays(today) {
-	const dayStyle = [
-		'5.25rem',
-		'5.25rem',
-		'5rem',
-		'4rem',
-		'4.5rem',
-		'5.25rem',
-		'4.5rem'
-	];
-	if (today <= 2) {
-		document.querySelector('div.title.Day1').innerHTML = dayNames[today + 2];
-		document.querySelector('div.title.Day1').style.left = dayStyle[today + 2];
-		document.querySelector('div.title.Day2').innerHTML = dayNames[today + 3];
-		document.querySelector('div.title.Day2').style.left = dayStyle[today + 3];
-		document.querySelector('div.title.Day3').innerHTML = dayNames[today + 4];
-		document.querySelector('div.title.Day3').style.left = dayStyle[today + 4];
-	} else if (today == 3) {
-		document.querySelector('div.title.Day1').innerHTML = dayNames[5];
-		document.querySelector('div.title.Day1').style.left = dayStyle[5];
-		document.querySelector('div.title.Day2').innerHTML = dayNames[6];
-		document.querySelector('div.title.Day2').style.left = dayStyle[6];
-		document.querySelector('div.title.Day3').innerHTML = dayNames[0];
-		document.querySelector('div.title.Day3').style.left = dayStyle[0];
-	} else if (today == 4) {
-		document.querySelector('div.title.Day1').innerHTML = dayNames[6];
-		document.querySelector('div.title.Day1').style.left = dayStyle[6];
-		document.querySelector('div.title.Day2').innerHTML = dayNames[0];
-		document.querySelector('div.title.Day2').style.left = dayStyle[0];
-		document.querySelector('div.title.Day3').innerHTML = dayNames[1];
-		document.querySelector('div.title.Day3').style.left = dayStyle[1];
-	} else if (today == 5) {
-		document.querySelector('div.title.Day1').innerHTML = dayNames[0];
-		document.querySelector('div.title.Day1').style.left = dayStyle[0];
-		document.querySelector('div.title.Day2').innerHTML = dayNames[1];
-		document.querySelector('div.title.Day2').style.left = dayStyle[1];
-		document.querySelector('div.title.Day3').innerHTML = dayNames[2];
-		document.querySelector('div.title.Day3').style.left = dayStyle[2];
-	} else {
-		document.querySelector('div.title.Day1').innerHTML =
-			dayNames[today + 2 - 7];
-		document.querySelector('div.title.Day1').style.left =
-			dayStyle[today + 2 - 7];
-		document.querySelector('div.title.Day2').innerHTML =
-			dayNames[today + 3 - 7];
-		document.querySelector('div.title.Day2').style.left =
-			dayStyle[today + 3 - 7];
-		document.querySelector('div.title.Day3').innerHTML =
-			dayNames[today + 4 - 7];
-		document.querySelector('div.title.Day3').style.left =
-			dayStyle[today + 4 - 7];
-	}
+	document.querySelector('div.title.Day1').innerHTML = dayNames[today + 2];
+	document.querySelector('div.title.Day1').style.left = dayStyle[today + 2];
+	document.querySelector('div.title.Day2').innerHTML = dayNames[today + 3];
+	document.querySelector('div.title.Day2').style.left = dayStyle[today + 3];
+	document.querySelector('div.title.Day3').innerHTML = dayNames[today + 4];
+	document.querySelector('div.title.Day3').style.left = dayStyle[today + 4];
 }
 
-weather_log(whichObject) {
-	var d = new Date();
-	let tod = d.getDay();
-	getDays(tod);
+// Log weather
+function console_weather(whichObject, weather) {
+	var today = new Date();
 	if (whichObject == 0) {
-		console.log('Icons has been added to Tomorrow');
-	}
-	else if (whichObject == 1) {
-
-
+		console.log('Tommorow is ' + weather);
+	} else if (whichObject == 'Today') {
+		console.log('Today is ' + weather);
+	} else {
+		console.log(dayNames[today.getDay() + whichObject + 1] + ' is ' + weather);
 	}
 }

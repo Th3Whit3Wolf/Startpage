@@ -3,16 +3,13 @@ function calendar(month) {
 	var padding = '';
 	var totalFeb = '';
 	var i = 1;
-	var testing = '';
 
 	var current = new Date();
 	var cmonth = current.getMonth(); // current (today) month
 	var day = current.getDate();
 	var year = current.getFullYear();
 	var tempMonth = month + 1; //+1; //Used to match up the current month with the correct start date.
-	var prevMonth = month - 1;
 
-	var hr = current.getHours();
 	var min = current.getMinutes();
 	//Add a zero in front of numbers<10
 	if (min < 10) {

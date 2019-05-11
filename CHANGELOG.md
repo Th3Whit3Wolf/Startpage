@@ -1,4 +1,4 @@
-# Version 0.8 (First Release)(2019-05-08)
+# Version 0.8](https://github.com/Th3Whit3Wolf/Startpage/compare/a88bf65f5b70edb6d3c15fe601c59850eb6f74ef...d83355e81ef571f139c035b19199450098f94610) (First Release)(2019-05-08)
 
 ### Bug Fixes
 
