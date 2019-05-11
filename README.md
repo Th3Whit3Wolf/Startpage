@@ -83,19 +83,13 @@ You can also configure how many news items you get (via js/api.js)
 
 [startpages](https://www.reddit.com/r/startpages/)
 
+[tilde-enhaced](https://github.com/Ozencb/tilde-enhanced)
+
 ## Caution:
 
-I designed this on Firefox:
-
-I've tested on chromium
-
-- Should be okay
-
-I've test on surfer(webkit)
-
-- Calendar for some reason only shows first week and incorrect days
-
-I haven't tested on any other platform
+This startpage has been tested on Firefox and Chromium.
+There are no plans to support Webkit, or any other platforms at this time, however contributions are
+excepted.
 
 ## [Demo](https://th3whit3wolf.github.io/Startpage/)
 
