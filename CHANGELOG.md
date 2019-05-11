@@ -1,3 +1,9 @@
+# [Version 0.10](https://github.com/Th3Whit3Wolf/Startpage/compare/ca3a1cbb9ec8279672f3fc44b9cb9d522d9b2619...1e9026d2802bffdd5b6f60770159c9280ce536b2) (2019-05-11)
+
+### Bug Fixes
+
+- **Tilde (Enhanced)** Integrated tilde (enhanced) search functionality
+
 # [Version 0.9](https://github.com/Th3Whit3Wolf/Startpage/compare/d83355e81ef571f139c035b19199450098f94610...ca3a1cbb9ec8279672f3fc44b9cb9d522d9b2619) (2019-05-11)
 
 ### Bug Fixes
