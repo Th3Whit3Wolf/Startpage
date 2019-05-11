@@ -1,6 +1,12 @@
 // Typography
+@font-face {
+    font-family: 'Roboto-Regular';
+    src: url('assets/fonts/Roboto-Regular.woff2');
+    font-weight: normal;
+    font-style: normal;
+}
 
-$fontfamily: sofia-pro-soft, sans-serif;
+$fontfamily: Roboto, sans-serif;
 
 $body-font-size: 1rem;
 
@@ -18,9 +24,6 @@ $cyan: #28def0;
 $gblue: #44505c;
 
 $git-gray: #24292e;
-
-$test: #2aa1ae;
-
 
 $green1: #67b11d;
 $green2: #86dc2f;

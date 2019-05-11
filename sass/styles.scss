@@ -3,7 +3,8 @@
 @import 'typography';
 @import 'cal';
 @import 'weather';
-@import 'news';
+@import 'info';
+@import 'search';
 
 
 html {
@@ -53,30 +54,6 @@ body {
   h4{
     padding-left: 1.6rem;
   }
-}
-
-.search {
-  height: 1rem;
-  width: 80%;
-  height: 4rem;
-  background: transparent;
-  margin: 1rem auto;
-  border-bottom: 5px;
-  bottom: 5;
-  border: none;
-  border-bottom: 3px solid $primary;
-  opacity: 0.3;
-}
-
-.search input {
-  height: 6rem;
-  border: none;
-  background-image: none;
-  background-color: transparent;
-  box-shadow: none;
-  color: $primary;
-  width: calc(100% - 96px);
-  font-weight: 500;
 }
 
 .browse {
@@ -138,7 +115,6 @@ body {
   text-transform: uppercase;
   color: black;
 
-
   display: flex;
   align-items: center;
   justify-content: center;
@@ -154,6 +130,7 @@ body {
   margin-left: calc((100% - 105.6rem)/2);
   grid-template-columns: 35.2rem 35.2rem 33.6rem;
 }
+
 .grid > div {
   margin: 1.6rem 0;
 }
